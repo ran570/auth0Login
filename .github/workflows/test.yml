@@ -27,5 +27,5 @@ jobs:
         realm: Username-Password-Authentication
         audience: https://ran570.us.auth0.com/api/v2/
         scope: email
-        username: ${ secret.ACTION_USERNAME }
-        password: ${ secret.ACTION_PASSWORD }
+        username: ${{ secrets.ACTION_USERNAME }}
+        password: ${{ secrets.ACTION_PASSWORD }}
