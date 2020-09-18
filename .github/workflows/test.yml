@@ -22,4 +22,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ./
       with:
-        milliseconds: 1000
+        domain: ran570.us.auth0.com
+        client_id: 6cFvyIEg5F8Gw04Ca6h4oxTnExTaRvyj
+        realm: Username-Password-Authentication
+        audience: https://ran570.us.auth0.com/api/v2/
+        scope: email
+        username: ${ secret.ACTION_USERNAME }
+        password: ${ secret.ACTION_PASSWORD }
