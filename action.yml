@@ -1,5 +1,8 @@
 name: 'Auth0 Login'
 description: 'Perform an Auth0 Login with given parameters'
+branding:
+  icon: user-check
+  color: orange
 inputs:
   domain:
     description: 'Auth0 Domain for authentication'
