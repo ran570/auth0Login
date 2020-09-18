@@ -1,13 +1,33 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Auth0 Login'
+description: 'Perform an Auth0 Login with given parameters'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  domain:
+    description: 'Auth0 Domain for authentication'
     required: true
-    default: '1000'
+  client_id:
+    description: 'The Auth0 Client Id'
+    required: true
+  audience:
+    description: 'The audience for the granted token'
+    required: false
+  scope:
+    description: "Scope for the token"
+    required: true
+  realm:
+    description: "The connection name/realm of the username - check you auth0 connections list connected to the application"
+    required: true
+  username:
+    description: "The username"
+    required: true
+  password:
+    description: "Login Password"
+    required: false
+
 outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+  authorization:
+    description: 'The authorization string used for subsequent requests headers, i.e. Bearer + token'
+  token:
+    description: 'The actual token data'
 runs:
   using: 'node12'
   main: 'dist/index.js'
