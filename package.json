@@ -29,7 +29,7 @@
     "process": "^0.11.10"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.24.1",
+    "@vercel/ncc": "^0.28.0",
     "eslint": "^7.10.0",
     "jest": "^26.1.0",
     "request": "^2.88.2"
